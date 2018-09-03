@@ -185,6 +185,7 @@
     <Compile Include="Controllers\RegistracijaController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Controllers\VozacController.cs" />
+    <Compile Include="Controllers\VoznjaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -269,6 +270,7 @@
     <Folder Include="Views\Korisnik\" />
     <Folder Include="Views\Registracija\" />
     <Folder Include="Views\Vozac\" />
+    <Folder Include="Views\Voznja\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
