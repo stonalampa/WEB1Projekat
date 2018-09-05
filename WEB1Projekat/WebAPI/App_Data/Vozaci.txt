@@ -1,3 +1,4 @@
 1;comi;comi;Ćomi;McRea;MUSKI;1234567891234;123456789;comi@hotmail.com;VOZAC;nema voznje;;undefined;undefined;undefined;;comi;1234;213;123;KOMBIVOZILA;True
 2;mica;mica;Mica;McRae;ZENSKI;123123123;123123;mica@gmail.com;VOZAC;nema voznje;;undefined;undefined;undefined;;mica;1234;1234;1234;KOMBIVOZILA;False
 3;fandjo;fandjo;fandjo;fandjo;MUSKI;123123123;123;nene;VOZAC;nema voznje;;undefined;undefined;undefined;;fandjo;12331;1213;123;KOMBIVOZILA;False
+4;test;test;test;test;MUSKI;test;test;test;VOZAC;nema voznje;;undefined;undefined;undefined;;test;test;test;test;KOMBIVOZILA;False

@@ -780,8 +780,8 @@
         let auto;
         if (pomAuto == "KOMBI VOZILO")
             auto = "KOMBIVOZILA";
-        else if( pomAuto == "PUTNICKIKAUTOMOBIL")
-            auto = "PUTNICKIAUTOMOBIL";
+        else if( pomAuto == "PUTNICKI AUTOMOBIL")
+            auto = "PUTNICKI AUTOMOBIL";
 
         let adresa = {
             UlicaBroj: `${niz[2]}`,
