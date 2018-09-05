@@ -100,9 +100,9 @@
                             } else if (data[voznja].Status == 4) {
                                 table += '<td>Otkazana</td>';
                             } else if (data[voznja].Status == 5) {
-                                table += '<td>Neuspjesna</td>';
+                                table += '<td>Neuspesna</td>';
                             } else if (data[voznja].Status == 6) {
-                                table += '<td>Uspjesna</td>';
+                                table += '<td>Uspesna</td>';
                             }
                             table += "<td>";
                             if (vratiStatusVoznje(data[voznja].Status) == "Kreirana") {
@@ -215,14 +215,14 @@
                             } else if (data[voznja].Status == 4) {
                                 tableOfProducts += '<td>Otkazana</td>';
                             } else if (data[voznja].Status == 5) {
-                                tableOfProducts += '<td>Neuspjesna</td>';
+                                tableOfProducts += '<td>Neuspesna</td>';
                             } else if (data[voznja].Status == 6) {
-                                tableOfProducts += '<td>Uspjesna</td>';
+                                tableOfProducts += '<td>Uspesna</td>';
                             }
                             if (data[voznja].Status == 0 || data[voznja].Status == 1 || data[voznja].Status == 2) {
-                                tableOfProducts += `<td>${data[voznja].Komentar.Opis}</td><td>${data[voznja].Komentar.OcenaVoznje}</td><td>${data[voznja].Komentar.DatumObjave}</td><td><button id="uspjesnaVoznja" type="button" value=${data[voznja].IdVoznje}><b>Uspjesna voznja</b></button></td><td><button id="neuspjesnaVoznjaKomentar" type="button" value=${data[voznja].IdVoznje}><b>Neuspjesna voznja</b></button></td></tr>`;
+                                tableOfProducts += `<td>${data[voznja].Komentar.Opis}</td><td>${data[voznja].Komentar.OcenaVoznje}</td><td>${data[voznja].Komentar.DatumObjave}</td><td><button id="uspesnaVoznja" type="button" value=${data[voznja].IdVoznje}><b>Uspesna voznja</b></button></td><td><button id="neuspesnaVoznjaKomentar" type="button" value=${data[voznja].IdVoznje}><b>Neuspesna voznja</b></button></td></tr>`;
                             } else if (data[voznja].StatusVoznje == 4 || data[voznja].StatusVoznje == 5) {
-                                tableOfProducts += `<td>${data[voznja].Komentar.Opis}</td><td>${data[voznja].Komentar.OcenaVoznje}</td><td>${data[voznja].Komentar.DatumObjave}</td><td><button id="uspjesnaVoznja" type="button" value ="disable" disabled="disabled"><b>Uspjesna voznja</b></button></td><td><button id="neuspjesnaVoznjaKomentar" type="button" value ="disable" disabled="disabled"><b>Neuspjesna voznja</b></button></td></tr>`;
+                                tableOfProducts += `<td>${data[voznja].Komentar.Opis}</td><td>${data[voznja].Komentar.OcenaVoznje}</td><td>${data[voznja].Komentar.DatumObjave}</td><td><button id="uspesnaVoznja" type="button" value ="disable" disabled="disabled"><b>Uspesna voznja</b></button></td><td><button id="neuspesnaVoznjaKomentar" type="button" value ="disable" disabled="disabled"><b>Neuspesna voznja</b></button></td></tr>`;
                             } else {
                             }//<td><button id="prihvatiVoznju" type="button" value=${data[voznja].IdVoznje}><b>Prihvati voznju</b></button></td> //<td><button id="prihvatiVoznju" type="button" value ="disable" disabled="disabled"><b>Prihvati voznju</b></button></td>
                         }
@@ -563,9 +563,9 @@
                 } else if (data[voznja].Status == 4) {
                     tableOfProducts += '<td>Otkazana</td>';
                 } else if (data[voznja].Status == 5) {
-                    tableOfProducts += '<td>Neuspjesna</td>';
+                    tableOfProducts += '<td>Neuspesna</td>';
                 } else if (data[voznja].Status == 6) {
-                    tableOfProducts += '<td>Uspjesna</td>';
+                    tableOfProducts += '<td>Uspesna</td>';
                 }
                 if ((data[voznja].Status == 0 && data[voznja].Vozac == "") || (data[voznja].Status == 0 && data[voznja].Vozac == null)) {
                     tableOfProducts += `<td>${data[voznja].Vozac}</td><td>${data[voznja].Komentar.Opis}</td><td>${data[voznja].Komentar.OcenaVoznje}</td><td>${data[voznja].Komentar.DatumObjave}</td><td><button id="dispecerDodajVozaca" type="button" value=${data[voznja].IdVoznje}><b>Dodaj vozaca</b></button></td></tr>`;
@@ -575,7 +575,7 @@
 
             }
             tableOfProducts += "</table>";
-            tableOfProducts += `<tr><td><select id="filterStatusDispSveCombo" name="StatusVoznje"><option value="Kreirana">Kreirana</option><option value="Formirana">Formirana</option><option value="Obradjena">Obradjena</option><option value="Prihvacena">Prihvacena</option><option value="Otkazana">Otkazana</option><option value="Neuspjesna">Neuspjesna</option><option value="Uspjesna">Uspjesna</option></select></td></tr></table><button id="filterStatusDispSveButton" type="button"><b>Filtriraj</b></button>`;
+            tableOfProducts += `<tr><td><select id="filterStatusDispSveCombo" name="StatusVoznje"><option value="Kreirana">Kreirana</option><option value="Formirana">Formirana</option><option value="Obradjena">Obradjena</option><option value="Prihvacena">Prihvacena</option><option value="Otkazana">Otkazana</option><option value="Neuspesna">Neuspesna</option><option value="Uspesna">Uspesna</option></select></td></tr></table><button id="filterStatusDispSveButton" type="button"><b>Filtriraj</b></button>`;
             $("#PrikazDispecerSve").html(tableOfProducts);
         });
 
@@ -780,7 +780,7 @@
         let auto;
         if (pomAuto == "KOMBI VOZILO")
             auto = "KOMBIVOZILA";
-        else
+        else if( pomAuto == "PUTNICKIKAUTOMOBIL")
             auto = "PUTNICKIAUTOMOBIL";
 
         let adresa = {
@@ -897,8 +897,8 @@
 
         $('#PrikaziKreiraneVoznjeVozac').hide();
         $('#map1').hide();
-        $('#UspjesnaVoznjaNoComm').hide();
-        $('#KomentarNeuspjesnaVoznja').hide();
+        $('#UspesnaVoznjaNoComm').hide();
+        $('#KomentarNeuspesnaVoznja').hide();
         $('#promenaLokacijeVozaca').hide();
         $('#PrikaziVoznjeVozac').hide();
 
@@ -1033,8 +1033,8 @@
         $('#map1').show();
 
         $('#PrikaziKreiraneVoznjeVozac').hide();
-        $('#UspjesnaVoznjaNoComm').hide();
-        $('#KomentarNeuspjesnaVoznja').hide();
+        $('#UspesnaVoznjaNoComm').hide();
+        $('#KomentarNeuspesnaVoznja').hide();
         $('#promenaLokacijeVozaca').hide();
         $('#PrikaziVoznjeVozac').hide();
 
@@ -1056,8 +1056,8 @@
         $('#zaprofilVozaca').hide();
         $('#zaizmenuVozaca').hide();
         $('#map1').hide();
-        $('#UspjesnaVoznjaNoComm').hide();
-        $('#KomentarNeuspjesnaVoznja').hide();
+        $('#UspesnaVoznjaNoComm').hide();
+        $('#KomentarNeuspesnaVoznja').hide();
         $('#promenaLokacijeVozaca').hide();
         //$("#IzmjenaKorisnik2").hide();
         //$("#PrikazKorisnik2").hide();
@@ -1114,21 +1114,21 @@
 
     // Kraj
 
-    $(document).on('click', '#uspjesnaVoznja', function () {
+    $(document).on('click', '#uspesnaVoznja', function () {
         let fired_button9 = $(this).val();
-        localStorage.setItem("uspjesnaVoznja", fired_button9);
+        localStorage.setItem("uspesnaVoznja", fired_button9);
 
         $('#PrikaziKreiraneVoznjeVozac').hide();
         $('#zaprofilVozaca').hide();
         $('#zaizmenuVozaca').hide();
         $('#map1').show();
-        $('#UspjesnaVoznjaNoComm').show();
-        $('#KomentarNeuspjesnaVoznja').hide();
+        $('#UspesnaVoznjaNoComm').show();
+        $('#KomentarNeuspesnaVoznja').hide();
         $('#promenaLokacijeVozaca').hide();
         $('#PrikaziVoznjeVozac').hide();
 
         $.get("/api/Voznja", function (data, status) {
-            let id = localStorage.getItem("uspjesnaVoznja");
+            let id = localStorage.getItem("uspesnaVoznja");
             let tableofData10 = "<table border='1'>";
             for (voznja in data) {
                 if (data[voznja].IdVoznje == id) {
@@ -1143,14 +1143,14 @@
     });
 
     $(document).on('click', '#potvrdiUnos', function () {
-        let id10 = localStorage.getItem("uspjesnaVoznja");
+        let id10 = localStorage.getItem("uspesnaVoznja");
 
         $('#PrikaziKreiraneVoznjeVozac').hide();
         $('#zaprofilVozaca').hide();
         $('#zaizmenuVozaca').hide();
         $('#map1').show();
-        $('#UspjesnaVoznjaNoComm').show();
-        $('#KomentarNeuspjesnaVoznja').hide();
+        $('#UspesnaVoznjaNoComm').show();
+        $('#KomentarNeuspesnaVoznja').hide();
         $('#promenaLokacijeVozaca').hide();
         $('#PrikaziVoznjeVozac').hide();
 
@@ -1183,7 +1183,7 @@
             dataType: 'json',
             success: function (data) {
                 if (data) {
-                    alert('Uspjesna voznja');
+                    alert('Uspesna voznja');
                     $(location).attr('href', 'wellcome.html');
                 } else {
                     alert('Ne postoji voznja koju zelite proglasiti uspjesnom.');
@@ -1192,26 +1192,26 @@
         })
     });
 
-    $(document).on('click', '#neuspjesnaVoznjaKomentar', function () {
+    $(document).on('click', '#neuspesnaVoznjaKomentar', function () {
         let fired_button7 = $(this).val();
-        localStorage.setItem("neuspjesnaVoznja", fired_button7);
+        localStorage.setItem("neuspesnaVoznja", fired_button7);
         $('#PrikaziKreiraneVoznjeVozac').hide();
         $('#zaprofilVozaca').hide();
         $('#zaizmenuVozaca').hide();
         $('#map1').hide();
-        $('#UspjesnaVoznjaNoComm').hide();
-        $('#KomentarNeuspjesnaVoznja').show();
+        $('#UspesnaVoznjaNoComm').hide();
+        $('#KomentarNeuspesnaVoznja').show();
         $('#promenaLokacijeVozaca').hide();
         $('#PrikaziVoznjeVozac').hide();
         $.get("/api/Voznja", function (data, status) {
-            let id = localStorage.getItem("neuspjesnaVoznja");
+            let id = localStorage.getItem("neuspesnaVoznja");
             let tableofData7 = "<table border='1'>";
             for (voznja in data) {
                 if (data[voznja].IdVoznje == id) {
                     tableofData7 += "<tr><td>Opis</td><td><input id=\"opis1\" type=\"text\" name=\"Opis\" value=\"" + data[voznja].Komentar.Opis + "\"/></td></tr>" +
                         "<tr><td>Datum objave</td><td><input id=\"datum1\" type=\"datetime\" name=\"DTObjave\" value=\"" + data[voznja].Komentar.DatumObjave + "\"/></td></tr>" +
                         "<tr><td>Ocjena</td><td><input id=\"ocjena1\" min=\"0\" max=\"5\" type=\"number\" name=\"Ocjena\" value=\"" + data[voznja].Komentar.OcenaVoznje + "\"/></td></tr>" +
-                        "<tr><td colspan=\"2\" align=\"center\"><button id=\"neuspjesnaVoznjaPotvrdi\" type=\"button\"><b>Potvrdi komentar</b></button></td></tr>";
+                        "<tr><td colspan=\"2\" align=\"center\"><button id=\"neuspesnaVoznjaPotvrdi\" type=\"button\"><b>Potvrdi komentar</b></button></td></tr>";
                 }
             }
             tableofData7 += "</table>";
@@ -1219,8 +1219,8 @@
         });
     });
 
-    $(document).on('click', '#neuspjesnaVoznjaPotvrdi', function () {
-        let id8 = localStorage.getItem("neuspjesnaVoznja");
+    $(document).on('click', '#neuspesnaVoznjaPotvrdi', function () {
+        let id8 = localStorage.getItem("neuspesnaVoznja");
 
         let komentarVoznja1 = {
             Opis: `${$('#opis1').val()}`,
@@ -1243,7 +1243,7 @@
             dataType: 'json',
             success: function (data) {
                 if (data) {
-                    alert('Neuspjesna voznja');
+                    alert('Neuspesna voznja');
                     $(location).attr('href', 'wellcome.html');
                 } else {
                     alert('Ne postoji voznja koju zelite proglasiti neuspjesnom.');
@@ -1257,8 +1257,8 @@
         $('#zaprofilVozaca').hide();
         $('#zaizmenuVozaca').hide();
         $('#map1').show();
-        $('#UspjesnaVoznjaNoComm').hide();
-        $('#KomentarNeuspjesnaVoznja').hide();
+        $('#UspesnaVoznjaNoComm').hide();
+        $('#KomentarNeuspesnaVoznja').hide();
         $('#promenaLokacijeVozaca').show();
         $('#PrikaziVoznjeVozac').hide();
     })
@@ -1292,8 +1292,8 @@
         $('#zaprofilVozaca').hide();
         $('#zaizmenuVozaca').hide();
         $('#map1').hide();
-        $('#UspjesnaVoznjaNoComm').hide();
-        $('#KomentarNeuspjesnaVoznja').hide();
+        $('#UspesnaVoznjaNoComm').hide();
+        $('#KomentarNeuspesnaVoznja').hide();
         $('#promenaLokacijeVozaca').hide();
         $('#PrikaziVoznjeVozac').show();
     })
@@ -1427,9 +1427,9 @@
                         } else if (data[voznja].Status == 4) {
                             table += '<td>Otkazana</td>';
                         } else if (data[voznja].Status == 5) {
-                            table += '<td>Neuspjesna</td>';
+                            table += '<td>Neuspesna</td>';
                         } else if (data[voznja].Status == 6) {
-                            table += '<td>Uspjesna</td>';
+                            table += '<td>Uspesna</td>';
                         }
                         table += "<td>";
                         if (vratiStatusVoznje(data[voznja].Status) == "Kreirana") {
@@ -1530,9 +1530,9 @@
                         } else if (data[voznja].Status == 4) {
                             table += '<td>Otkazana</td>';
                         } else if (data[voznja].Status == 5) {
-                            table += '<td>Neuspjesna</td>';
+                            table += '<td>Neuspesna</td>';
                         } else if (data[voznja].Status == 6) {
-                            table += '<td>Uspjesna</td>';
+                            table += '<td>Uspesna</td>';
                         }
                         table += "<td>";
                         if (vratiStatusVoznje(data[voznja].Status) == "Kreirana") {
@@ -1634,9 +1634,9 @@
                         } else if (data[voznja].Status == 4) {
                             table += '<td>Otkazana</td>';
                         } else if (data[voznja].Status == 5) {
-                            table += '<td>Neuspjesna</td>';
+                            table += '<td>Neuspesnja</td>';
                         } else if (data[voznja].Status == 6) {
-                            table += '<td>Uspjesna</td>';
+                            table += '<td>Uspesna</td>';
                         }
                         table += "<td>";
                         if (vratiStatusVoznje(data[voznja].Status) == "Kreirana") {
@@ -1740,9 +1740,9 @@
                                 } else if (data[voznja].Status == 4) {
                                     table += '<td>Otkazana</td>';
                                 } else if (data[voznja].Status == 5) {
-                                    table += '<td>Neuspjesna</td>';
+                                    table += '<td>Neuspesna</td>';
                                 } else if (data[voznja].Status == 6) {
-                                    table += '<td>Uspjesna</td>';
+                                    table += '<td>Uspesna</td>';
                                 }
                                 table += "<td>";
                                 if (vratiStatusVoznje(data[voznja].Status) == "Kreirana") {
@@ -1805,9 +1805,9 @@
                                 } else if (data[voznja].Status == 4) {
                                     table += '<td>Otkazana</td>';
                                 } else if (data[voznja].Status == 5) {
-                                    table += '<td>Neuspjesna</td>';
+                                    table += '<td>Neuspesna</td>';
                                 } else if (data[voznja].Status == 6) {
-                                    table += '<td>Uspjesna</td>';
+                                    table += '<td>Uspesna</td>';
                                 }
                                 table += "<td>";
                                 if (vratiStatusVoznje(data[voznja].Status) == "Kreirana") {
@@ -1869,9 +1869,9 @@
                                 } else if (data[voznja].Status == 4) {
                                     table += '<td>Otkazana</td>';
                                 } else if (data[voznja].Status == 5) {
-                                    table += '<td>Neuspjesna</td>';
+                                    table += '<td>Neuspesna</td>';
                                 } else if (data[voznja].Status == 6) {
-                                    table += '<td>Uspjesna</td>';
+                                    table += '<td>Uspesna</td>';
                                 }
                                 table += "<td>";
                                 if (vratiStatusVoznje(data[voznja].Status) == "Kreirana") {
@@ -1977,9 +1977,9 @@
                                 } else if (data[voznja].Status == 4) {
                                     table += '<td>Otkazana</td>';
                                 } else if (data[voznja].Status == 5) {
-                                    table += '<td>Neuspjesna</td>';
+                                    table += '<td>Neuspesna</td>';
                                 } else if (data[voznja].Status == 6) {
-                                    table += '<td>Uspjesna</td>';
+                                    table += '<td>Uspesna</td>';
                                 }
                                 table += "<td>";
                                 if (vratiStatusVoznje(data[voznja].Status) == "Kreirana") {
@@ -2042,9 +2042,9 @@
                                 } else if (data[voznja].Status == 4) {
                                     table += '<td>Otkazana</td>';
                                 } else if (data[voznja].Status == 5) {
-                                    table += '<td>Neuspjesna</td>';
+                                    table += '<td>Neuspesna</td>';
                                 } else if (data[voznja].Status == 6) {
-                                    table += '<td>Uspjesna</td>';
+                                    table += '<td>Uspesna</td>';
                                 }
                                 table += "<td>";
                                 if (vratiStatusVoznje(data[voznja].Status) == "Kreirana") {
@@ -2106,9 +2106,9 @@
                                 } else if (data[voznja].Status == 4) {
                                     table += '<td>Otkazana</td>';
                                 } else if (data[voznja].Status == 5) {
-                                    table += '<td>Neuspjesna</td>';
+                                    table += '<td>Neuspesna</td>';
                                 } else if (data[voznja].Status == 6) {
-                                    table += '<td>Uspjesna</td>';
+                                    table += '<td>Uspesna</td>';
                                 }
                                 table += "<td>";
                                 if (vratiStatusVoznje(data[voznja].Status) == "Kreirana") {
@@ -2213,9 +2213,9 @@
                                 } else if (data[voznja].Status == 4) {
                                     table += '<td>Otkazana</td>';
                                 } else if (data[voznja].Status == 5) {
-                                    table += '<td>Neuspjesna</td>';
+                                    table += '<td>Neuspesna</td>';
                                 } else if (data[voznja].Status == 6) {
-                                    table += '<td>Uspjesna</td>';
+                                    table += '<td>Uspesna</td>';
                                 }
                                 table += "<td>";
                                 if (vratiStatusVoznje(data[voznja].Status) == "Kreirana") {
@@ -2279,9 +2279,9 @@
                                 } else if (data[voznja].Status == 4) {
                                     table += '<td>Otkazana</td>';
                                 } else if (data[voznja].Status == 5) {
-                                    table += '<td>Neuspjesna</td>';
+                                    table += '<td>Neuspesna</td>';
                                 } else if (data[voznja].Status == 6) {
-                                    table += '<td>Uspjesna</td>';
+                                    table += '<td>Uspesna</td>';
                                 }
                                 table += "<td>";
                                 if (vratiStatusVoznje(data[voznja].Status) == "Kreirana") {
@@ -2344,9 +2344,9 @@
                                 } else if (data[voznja].Status == 4) {
                                     table += '<td>Otkazana</td>';
                                 } else if (data[voznja].Status == 5) {
-                                    table += '<td>Neuspjesna</td>';
+                                    table += '<td>Neuspesna</td>';
                                 } else if (data[voznja].Status == 6) {
-                                    table += '<td>Uspjesna</td>';
+                                    table += '<td>Uspesna</td>';
                                 }
                                 table += "<td>";
                                 if (vratiStatusVoznje(data[voznja].Status) == "Kreirana") {

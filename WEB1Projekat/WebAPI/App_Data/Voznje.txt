@@ -1,5 +1,3 @@
-1;05-Sep-18 14:00:02;;undefined;undefined;undefined;;KOMBIVOZILA;;;;;;;disp;Misko;0;;05-Sep-18 14:00:02;;1;0;FORMIRANA
-2;05-Sep-18 14:00:19;;undefined;undefined;undefined;;PUTNICKIAUTOMOBIL;;;undefined;undefined;undefined;;disp;Paja;23;;05-Sep-18 14:00:19;;2;0;USPESNA
-3;05-Sep-18 14:55:10;;undefined;undefined;undefined;;KOMBIVOZILA;;;;;;;disp;Nevena;0;;05-Sep-18 14:55:10;;3;0;FORMIRANA
-4;05-Sep-18 14:55:20;45.242576104999394;19.842447730687354;Bulevar oslobođenja 131;Novi Sad;21000;PUTNICKIAUTOMOBIL;;;;;;;disp;Paja;0;;05-Sep-18 14:55:20;;4;0;FORMIRANA
-5;05-Sep-18 14:55:37;;undefined;undefined;undefined;;KOMBIVOZILA;;;;;;;disp;comi;0;nema musterije;05-Sep-18 14:55:37;comi;5;2;NEUSPESNA
+1;05-Sep-18 15:05:32;45.242455236938596;19.844099971440528;Boška Buhe 10a;Novi Sad;;KOMBIVOZILA;;;;;;;disp;comi;0;nema musterije;05-Sep-18 15:05:32;comi;1;2;NEUSPESNA
+2;05-Sep-18 15:07:05;45.24125339886357;19.844501244725734;Dragiše Brašovana 4;Novi Sad;;KOMBIVOZILA;;45.237545033310504;19.835715269531192;Balzakova 55a;Novi Sad;;disp;mica;200;;05-Sep-18 15:07:05;;2;0;USPESNA
+3;05-Sep-18 15:08:32;;undefined;undefined;undefined;;KOMBIVOZILA;stonalampa;;;;;;;comi;0;;05-Sep-18 15:08:32;;3;0;PRIHVACENA

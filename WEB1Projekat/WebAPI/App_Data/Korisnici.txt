@@ -1,2 +1,1 @@
-1;alek;alek;Aleksandra;Jagodic;ZENSKO;54060601;61464651;alek@gmail.com;MUSTERIJA;nema
-2;marko;marko;Marko;Markovic;MUSKO;54060602;61464652;marko@gmail.com;MUSTERIJA;nema
+1;stonalampa;stonalampa;test;test;MUSKI;123456;123455;nne@nen.com;MUSTERIJA;nema voznje
