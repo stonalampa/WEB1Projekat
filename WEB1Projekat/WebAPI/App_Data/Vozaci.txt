@@ -1,0 +1,4 @@
+1;Misko;misko;Misko;Dondur;MUSKI;2305972000000;065639103;misko@gmail.com;VOZAC;nema voznje;45;45;Cara Lazara 23;Banja Luka;78000;Misko;1997;45;45;KOMBIVOZILA;True
+2;Paja;paja;Paja;Cutura;MUSKI;65432123;5646405;paja@gmail.com;VOZAC;nema voznje;45.242445794110516;19.842372628834937;Bulevar oslobođenja 131;Novi Sad;21000;Paja;2015;45;45;PUTNICKIAUTOMOBIL;True
+3;Jare;jare;Zivadin;Jaric;Muski;1844056;5646505561;jare@gmail.com;VOZAC;nema voznje;45;45;Cara Lazara 45;Banja Luka;78000;Jare;1996;45;45;PUTNICKIAUTOMOBIL;True
+4;Nevena;nevena;Nevena;Nevenovic;ZENSKI;14564654;46541560;nevena@gmail.com;VOZAC;nema voznje;454;54;Cara Dusana 5;Novi Sad;21000;Nevena;2005;45;54;PUTNICKIAUTOMOBIL;False

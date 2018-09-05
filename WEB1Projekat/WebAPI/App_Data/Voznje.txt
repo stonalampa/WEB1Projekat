@@ -1,0 +1,2 @@
+1;05-Sep-18 14:00:02;;undefined;undefined;undefined;;KOMBIVOZILA;;;;;;;disp;Misko;0;;05-Sep-18 14:00:02;;1;0;FORMIRANA
+2;05-Sep-18 14:00:19;;undefined;undefined;undefined;;PUTNICKIAUTOMOBIL;;;;;;;disp;Paja;0;;05-Sep-18 14:00:19;;2;0;FORMIRANA
