@@ -872,23 +872,23 @@
         })
     })
 
-    /*$('#izmeniVoznjuKorisnik').click(function () {
+    $('#izmeniVoznjuKorisnik').click(function () {
         $('#zaprofil').hide();
         $('#zaizmenu').hide();
         $('#divDodajVoznju').hide();
         $('#divOtkaziVoznju').hide();
         $('#divIzmeniVoznju').toggle(500);
-    })*/
+    })
 
 
 
-    /*$('#odustaniOdVoznjeKorisnik').click(function () {
+    $('#odustaniOdVoznjeKorisnik').click(function () {
         $('#zaprofil').hide();
         $('#zaizmenu').hide();
         $('#divDodajVoznju').hide();
         $('#divIzmeniVoznju').hide();
         $('#divOtkaziVoznju').toggle(500);
-    })*/
+    })
 
     // Kad se uloguje VOZAC
 

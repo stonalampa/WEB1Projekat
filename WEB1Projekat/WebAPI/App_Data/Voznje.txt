@@ -1,2 +1,5 @@
 1;05-Sep-18 14:00:02;;undefined;undefined;undefined;;KOMBIVOZILA;;;;;;;disp;Misko;0;;05-Sep-18 14:00:02;;1;0;FORMIRANA
-2;05-Sep-18 14:00:19;;undefined;undefined;undefined;;PUTNICKIAUTOMOBIL;;;;;;;disp;Paja;0;;05-Sep-18 14:00:19;;2;0;FORMIRANA
+2;05-Sep-18 14:00:19;;undefined;undefined;undefined;;PUTNICKIAUTOMOBIL;;;undefined;undefined;undefined;;disp;Paja;23;;05-Sep-18 14:00:19;;2;0;USPESNA
+3;05-Sep-18 14:55:10;;undefined;undefined;undefined;;KOMBIVOZILA;;;;;;;disp;Nevena;0;;05-Sep-18 14:55:10;;3;0;FORMIRANA
+4;05-Sep-18 14:55:20;45.242576104999394;19.842447730687354;Bulevar oslobođenja 131;Novi Sad;21000;PUTNICKIAUTOMOBIL;;;;;;;disp;Paja;0;;05-Sep-18 14:55:20;;4;0;FORMIRANA
+5;05-Sep-18 14:55:37;;undefined;undefined;undefined;;KOMBIVOZILA;;;;;;;disp;comi;0;nema musterije;05-Sep-18 14:55:37;comi;5;2;NEUSPESNA
